@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>welcome</title>
+</head>
+<body>
+<a href="{{request.path}}?{{request.GET.urlencode}}&delete=1">current argument </a>
+<br>
+path:{{request.path}}
+<br>
+user:{{request.user}}
+<br>
+urlcode:{{request.GET.urlencode}}
+<br>
+come on! You can master Django!!!!
+{% for item in List %}
+{{item}}{% if not forloop.last%},{% endif %}
+{% endfor %}
+site:{{info_dict.site}} content:{{info_dict.content}}
+
+{% for key,value in info_dict.items %}
+       {{key}}: {{value}}
+{% endfor %}
+
+{% url 'add' 4 5 %}
+
+{% for i in Tutorial %}
+{{i}}
+{% endfor %}
+{{string}}
+</body>
+</html>
